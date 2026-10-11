@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augusto Silva | Consultoria Executiva & Governança Corporativa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0f2042',
+                            900: '#0a192f',
+                            950: '#050c1a',
+                        },
+                        gold: {
+                            300: '#f3e5ab',
+                            400: '#e6ca65',
+                            500: '#d4af37',
+                            600: '#aa882c',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa882c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #d4af37 0%, #aa882c 100%);
+        }
+        .gold-border-glow {
+            box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+        }
+        .glass-card {
+            background: rgba(15, 32, 66, 0.65);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <!-- Top Institutional Bar -->
+    <div class="bg-navy-900 border-b border-gold-500/20 py-2 px-4 text-xs text-slate-300">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-id-card text-gold-500"></i> Registro CRA-MG Ativo
+                </span>
+                <span class="hidden sm:inline text-gold-500/40">•</span>
+                <span class="flex items-center gap-1.5 font-medium text-gold-400">
+                    <i class="fa-solid fa-award text-gold-500"></i> Representante do CRA-MG em Uberlândia (2025 – 2026)
+                </span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#simulador" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-calculator text-gold-500/80 mr-1"></i> Simulador ROI</a>
+                <a href="#contato" class="hover:text-gold-400 transition-colors"><i class="fa-solid fa-building-columns text-gold-500/80 mr-1"></i> Agendimento Executivo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="sticky top-0 z-40 bg-navy-950/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center font-serif text-navy-950 font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    AS
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-lg text-white block tracking-wide uppercase">Augusto Silva</span>
+                    <span class="text-xs text-gold-500 tracking-wider font-semibold uppercase block">Governança & Eficiência Operacional</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#autoridade" class="hover:text-gold-400 transition-colors">Credenciais</a>
+                <a href="#solucoes" class="hover:text-gold-400 transition-colors">Soluções Estratégicas</a>
+                <a href="#simulador" class="hover:text-gold-400 transition-colors">Calculadora ROI</a>
+                <a href="#metodologia" class="hover:text-gold-400 transition-colors">Metodologia</a>
+                <a href="#diagnostico" class="gold-gradient-bg text-navy-950 font-bold px-5 py-2.5 rounded hover:brightness-110 transition-all shadow-md">
+                    Agendar Diagnóstico
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-300 hover:text-white text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#autoridade" class="block py-2 text-slate-300 hover:text-gold-400">Credenciais & Representação</a>
+            <a href="#solucoes" class="block py-2 text-slate-300 hover:text-gold-400">Soluções Estratégicas</a>
+            <a href="#simulador" class="block py-2 text-slate-300 hover:text-gold-400">Simulador de Economia ROI</a>
+            <a href="#metodologia" class="block py-2 text-slate-300 hover:text-gold-400">Metodologia de Governança</a>
+            <a href="#diagnostico" class="block w-full text-center gold-gradient-bg text-navy-950 font-bold py-3 rounded mt-2">
+                Agendar Diagnóstico Estratégico
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-navy-800 via-navy-950 to-navy-950 -z-10"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-shield-halved"></i> Governança Corporativa Executiva & Gestão de Risco
+                    </div>
+                    
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                        Transforme Operações Complexas em <span class="gold-gradient-text">Resultados de Alta Performance</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-lg sm:text-xl font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Consultoria estratégica para CEOs e Decisores. Eliminações de gargalos operacionais, adequação rigorosa de governança e maximização da margem EBTIDA.
+                    </p>
+
+                    <!-- Official Badges Strip -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 text-xs font-medium text-slate-300">
+                        <div class="bg-navy-900/90 border border-gold-500/30 px-3.5 py-2 rounded flex items-center gap-2.5">
+                            <i class="fa-solid fa-landmark text-gold-500 text-base"></i>
+                            <div>
+                                <span class="block font-bold text-white">Representante CRA-MG</span>
+                                <span class="text-slate-400 text-[11px]">Uberlândia (2025–2026)</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900/90 border border-slate-700 px-3.5 py-2 rounded flex items-center gap-2.5">
+                            <i class="fa-solid fa-certificate text-gold-500 text-base"></i>
+                            <div>
+                                <span class="block font-bold text-white">Registro Profissional</span>
+                                <span class="text-slate-400 text-[11px]">CRA-MG Ativo</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-navy-900/90 border border-slate-700 px-3.5 py-2 rounded flex items-center gap-2.5">
+                            <i class="fa-solid fa-layer-group text-gold-500 text-base"></i>
+                            <div>
+                                <span class="block font-bold text-white">ITIL 4 & Lean Six Sigma</span>
+                                <span class="text-slate-400 text-[11px]">Metodologias Globais</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#diagnostico" class="w-full sm:w-auto gold-gradient-bg text-navy-950 font-bold px-8 py-4 rounded shadow-lg hover:shadow-gold-500/20 hover:scale-[1.02] transition-all text-center">
+                            Solicitar Diagnóstico Estratégico
+                        </a>
+                        <a href="#simulador" class="w-full sm:w-auto bg-navy-900 hover:bg-navy-800 text-white border border-slate-700 font-semibold px-8 py-4 rounded transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator text-gold-500"></i> Simular ROI Operacional
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Card: Profile Summary & Institutional Authority -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-2xl p-8 relative gold-border-glow">
+                        <div class="absolute -top-3 right-6 gold-gradient-bg text-navy-950 font-bold text-xs px-3 py-1 rounded shadow">
+                            Executivo & Conselheiro
+                        </div>
+
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-full border-2 border-gold-500 flex items-center justify-center bg-navy-900 text-gold-400 font-serif text-2xl font-bold">
+                                AS
+                            </div>
+                            <div>
+                                <h3 class="font-serif text-2xl font-bold text-white">Augusto Silva</h3>
+                                <p class="text-gold-400 text-sm font-medium">Consultor de Governança & Eficiência</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-sm text-slate-300 border-t border-slate-800 pt-6">
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-500 mt-1"></i>
+                                <span><strong>Representante Institucional:</strong> Representante Oficial do CRA-MG na comarca de Uberlândia para o biênio 2025/2026.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-500 mt-1"></i>
+                                <span><strong>Formação de Alto Nível:</strong> Múltiplos MBAs em Gestão de Negócios, Governança Corporativa e Gestão Estratégica.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-500 mt-1"></i>
+                                <span><strong>Certificações Internacionais:</strong> ITIL 4 Foundation em Governança de TI e Lean Six Sigma Yellow Belt em Otimização de Processos.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-500 mt-1"></i>
+                                <span><strong>Foco em Resultados:</strong> Redução sistemática de custos operacionais e reestruturação de processos críticos.</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-800/80 flex justify-between items-center text-xs text-slate-400">
+                            <span>Atuação: Uberlândia e Região</span>
+                            <span class="text-gold-400 font-semibold"><i class="fa-solid fa-shield text-gold-500 mr-1"></i> Sigilo Absoluto em Contrato</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="autoridade" class="py-20 bg-navy-900 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2">Respeito Institucional & Expertise</h2>
+                <p class="font-serif text-3xl sm:text-4xl font-bold text-white">Credenciais que Garantem Segurança na Tomada de Decisão</p>
+                <div class="w-16 h-1 gold-gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-navy-950 p-8 rounded-xl border border-slate-800 hover:border-gold-500/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Representação CRA-MG</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Nombrado e atuante como <strong>Representante do Conselho Regional de Administração de Minas Gerais (CRA-MG)</strong> na Região de Uberlândia para os anos de <strong>2025 e 2026</strong>.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-gold-400 bg-navy-900 px-3 py-1 rounded border border-gold-500/20">
+                        CRA-MG Registro Ativo
+                    </span>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-navy-950 p-8 rounded-xl border border-slate-800 hover:border-gold-500/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">MBAs & Especializações</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Sólida bagagem acadêmica executiva com foco em Governança Corporativa, Gestão Estratégica de Negócios e Liderança Avançada, combinando teoria e prática operacional.
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-gold-400 bg-navy-900 px-3 py-1 rounded border border-gold-500/20">
+                        Pós-Graduações Concluídas
+                    </span>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-navy-950 p-8 rounded-xl border border-slate-800 hover:border-gold-500/40 transition-all group">
+                    <div class="w-14 h-14 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-500 text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-3">Certificações Internacionais</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Domínio prático de metodologias ágeis e de eficiência reconhecidas mundialmente: <strong>ITIL 4</strong> (Gestão de Serviços e Governança de TI) e <strong>Lean Six Sigma Yellow Belt</strong> (Eliminação de Desperdícios).
+                    </p>
+                    <span class="inline-block text-xs font-semibold text-gold-400 bg-navy-900 px-3 py-1 rounded border border-gold-500/20">
+                        ITIL 4 & Lean Six Sigma
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="py-20 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2">Escopo de Atuação Executiva</h2>
+                <p class="font-serif text-3xl sm:text-4xl font-bold text-white">Soluções Sob Medida para Desafios Complexos</p>
+                <p class="text-slate-400 text-sm mt-3">Intervenção direta para destravar o crescimento e blindar operações empresariais.</p>
+                <div class="w-16 h-1 gold-gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Solution 1 -->
+                <div class="bg-navy-900/80 p-8 rounded-xl border border-slate-800 hover:border-gold-500/30 transition-all">
+                    <div class="text-gold-500 text-3xl mb-4"><i class="fa-solid fa-sitemap"></i></div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Desenho de Governança Corporativa</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Estruturação de comitês, mapeamento de alçadas de decisão, alinhamento de sócios e implementação de boas práticas de transparência e prestação de contas.
+                    </p>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="bg-navy-900/80 p-8 rounded-xl border border-slate-800 hover:border-gold-500/30 transition-all">
+                    <div class="text-gold-500 text-3xl mb-4"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Otimização & Lean Processos</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Aplicação do Lean Six Sigma para identificar redundâncias, mapear gargalos produtivos e reduzir custos operacionais desnecessários sem perda de qualidade.
+                    </p>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="bg-navy-900/80 p-8 rounded-xl border border-slate-800 hover:border-gold-500/30 transition-all">
+                    <div class="text-gold-500 text-3xl mb-4"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Governança de TI & ITIL 4</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Alinhamento entre tecnologia e estratégia de negócios. Mapeamento de fluxos de valor de TI, mitigação de riscos cibernéticos e gestão de fornecedores de tecnologia.
+                    </p>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="bg-navy-900/80 p-8 rounded-xl border border-slate-800 hover:border-gold-500/30 transition-all">
+                    <div class="text-gold-500 text-3xl mb-4"><i class="fa-solid fa-sliders"></i></div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Reestruturação Operacional</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Reorganização de equipes e fluxos de trabalho operacionais, definição clara de responsabilidades (Matriz RACI) e implementação de OKRs e KPIs acionáveis.
+                    </p>
+                </div>
+
+                <!-- Solution 5 -->
+                <div class="bg-navy-900/80 p-8 rounded-xl border border-slate-800 hover:border-gold-500/30 transition-all">
+                    <div class="text-gold-500 text-3xl mb-4"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Gestão de Riscos & Compliance</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Mapeamento preventivo de vulnerabilidades operacionais e normativas, elaboração de planos de continuidade de negócios e auditoria de processos críticos.
+                    </p>
+                </div>
+
+                <!-- Solution 6 -->
+                <div class="bg-navy-900/80 p-8 rounded-xl border border-slate-800 hover:border-gold-500/30 transition-all">
+                    <div class="text-gold-500 text-3xl mb-4"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Conselho Consultivo & Mentoria Executive</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Atuação como conselheiro independente para tomada de decisão estratégica de acionistas e fundadores, trazendo olhar isento e altamente especializado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulador" class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold text-gold-500 uppercase tracking-widest">Simulador Interativo para CEOs</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Estime o Potencial de Economia da sua Operação</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Processos desalinhados e desprovidos de governança consomem em média de 10% a 25% da receita operacional líquida em refação, desperdícios e ineficiência.
+                    </p>
+                    <div class="p-4 bg-navy-950 rounded-lg border border-slate-800 text-xs text-slate-400 space-y-2">
+                        <p class="font-semibold text-gold-400"><i class="fa-solid fa-lightbulb mr-1"></i> Como o cálculo é feito?</p>
+                        <p>O simulador utiliza métricas consolidadas do Lean Six Sigma adaptadas para empresas de médio e grande porte em Minas Gerais.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Calculator Form -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-6 sm:p-8 rounded-2xl border border-gold-500/30 shadow-2xl">
+                        <h3 class="font-serif text-xl font-bold text-white mb-6 pb-3 border-b border-slate-800 flex items-center justify-between">
+                            <span>Simulador de Economia Operacional</span>
+                            <i class="fa-solid fa-calculator text-gold-500"></i>
+                        </h3>
+
+                        <div class="space-y-6">
+                            <!-- Input 1 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-medium text-slate-300 mb-2">
+                                    <label for="receita-range">Faturamento Anual da Empresa (R$)</label>
+                                    <span id="receita-val" class="text-gold-400 font-bold">R$ 5.000.000</span>
+                                </div>
+                                <input type="range" id="receita-range" min="1000000" max="50000000" step="500000" value="5000000" 
+                                    class="w-full h-2 bg-navy-950 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                                <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                                    <span>R$ 1M</span>
+                                    <span>R$ 25M</span>
+                                    <span>R$ 50M+</span>
+                                </div>
+                            </div>
+
+                            <!-- Input 2 -->
+                            <div>
+                                <div class="flex justify-between text-sm font-medium text-slate-300 mb-2">
+                                    <label for="equipe-range">Tamanho da Equipe Operacional/Administrativa</label>
+                                    <span id="equipe-val" class="text-gold-400 font-bold">30 colaboradores</span>
+                                </div>
+                                <input type="range" id="equipe-range" min="5" max="300" step="5" value="30" 
+                                    class="w-full h-2 bg-navy-950 rounded-lg appearance-none cursor-pointer accent-gold-500">
+                                <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                                    <span>5 pessoas</span>
+                                    <span>150 pessoas</span>
+                                    <span>300+ pessoas</span>
+                                </div>
+                            </div>
+
+                            <!-- Input 3 -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-300 mb-2">Nível Atual de Mapeamento de Processos</label>
+                                <select id="maturidade-select" class="w-full bg-navy-950 border border-slate-700 text-white text-sm rounded-lg p-3 focus:border-gold-500 focus:outline-none">
+                                    <option value="0.15">Baixo (Atividades informais, sem documentação ou KPIs)</option>
+                                    <option value="0.10" selected>Médio (Processos parciais, sem governança formal)</option>
+                                    <option value="0.05">Alto (Mapeado, mas necessitando de otimização de custos)</option>
+                                </select>
+                            </div>
+
+                            <!-- Result Box -->
+                            <div class="p-6 bg-navy-950 rounded-xl border border-gold-500/40 text-center space-y-2">
+                                <span class="text-xs uppercase tracking-wider text-slate-400 font-medium">Estimativa de Desperdício/Economia Anual Recuperável</span>
+                                <div id="resultado-economia" class="font-serif text-3xl sm:text-4xl font-extrabold gold-gradient-text">
+                                    R$ 250.000 /ano
+                                </div>
+                                <p class="text-xs text-slate-400 pt-1">
+                                    Projeção estimada de ganho líquido com a aplicação de consultoria de processos e governança.
+                                </p>
+                            </div>
+
+                            <a href="#diagnostico" onclick="preencherDiagnosticoComSimulador()" class="block w-full text-center gold-gradient-bg text-navy-950 font-bold py-3.5 rounded shadow hover:brightness-110 transition-all text-sm">
+                                Agendar Diagnóstico para Validar Estes Números
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="py-20 bg-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-gold-500 uppercase tracking-widest mb-2">Metodologia Estruturada</h2>
+                <p class="font-serif text-3xl sm:text-4xl font-bold text-white">Como Executamos a Transformação Operacional</p>
+                <div class="w-16 h-1 gold-gradient-bg mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-navy-900/60 p-6 rounded-xl border border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">01</span>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Diagnóstico Imersivo</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Entrevistas executivas com lideranças, auditoria de processos atuais e mapeamento de gargalos em até 15 dias.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-navy-900/60 p-6 rounded-xl border border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">02</span>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Plano de Governança</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Desenho da nova arquitetura de processos, matrizes de decisão, alçadas e frameworks Lean Six Sigma / ITIL 4.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-navy-900/60 p-6 rounded-xl border border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">03</span>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Implementação Guiada</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Acompanhamento lado a lado na execução, capacitação de gestores locais e alinhamento cultural de alta liderança.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-navy-900/60 p-6 rounded-xl border border-slate-800 relative">
+                    <span class="text-4xl font-serif font-bold text-gold-500/30 absolute top-4 right-4">04</span>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Monitoramento & KPI</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Estabelecimento de dashboards de governança, rituais de gestão de resultados e acompanhamento de ROI continuo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diagnostico" class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 sm:p-12 rounded-3xl border border-gold-500/40 shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-60 h-60 bg-gold-500/10 rounded-full blur-2xl"></div>
+
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="inline-block px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-3">
+                        Atendimento Diretivo e Confidencial
+                    </span>
+                    <h2 class="font-serif text-3xl font-bold text-white">Solicitar Diagnóstico Estratégico Inicial</h2>
+                    <p class="text-slate-300 text-sm mt-2">
+                        Preencha os dados da sua empresa para agendarmos uma sessão de alinhamento com Augusto Silva.
+                    </p>
+                </div>
+
+                <form id="form-diagnostico" class="space-y-6">
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Nome do Executivo / Sócio *</label>
+                            <input type="text" required placeholder="Ex: Roberto Mendes" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-sm text-white focus:border-gold-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Cargo / Função *</label>
+                            <input type="text" required placeholder="Ex: CEO / Diretor Operacional / Sócio" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-sm text-white focus:border-gold-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Nome da Empresa *</label>
+                            <input type="text" required placeholder="Sua Empresa / Grupo" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-sm text-white focus:border-gold-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">E-mail Corporativo *</label>
+                            <input type="email" required placeholder="executivo@suaempresa.com.br" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-sm text-white focus:border-gold-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Telefone / WhatsApp Direto *</label>
+                            <input type="tel" required placeholder="(34) 99000-0000" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-sm text-white focus:border-gold-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Principal Objetivo</label>
+                            <select id="objetivo-select" class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-sm text-white focus:border-gold-500 focus:outline-none">
+                                <option value="Redução de Desperdícios Operacionais">Redução de Desperdícios Operacionais</option>
+                                <option value="Implementação de Governança Corporativa">Implementação de Governança Corporativa</option>
+                                <option value="Estruturação de TI & ITIL 4">Estruturação de TI & Governança ITIL 4</option>
+                                <option value="Mentoria de Conselho Consultivo">Mentoria / Conselho Consultivo</option>
+                                <option value="Outros Desafios Estratégicos">Outros Desafios Estratégicos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Resumo do Momento Atual da Empresa</label>
+                        <textarea id="mensagem-campo" rows="3" placeholder="Comente brevemente sobre os principais gargalos ou objetivos da empresa..." class="w-full bg-navy-950 border border-slate-700 rounded-lg p-3 text-sm text-white focus:border-gold-500 focus:outline-none"></textarea>
+                    </div>
+
+                    <div class="pt-2">
+                        <button type="submit" class="w-full gold-gradient-bg text-navy-950 font-bold py-4 rounded-lg shadow-lg hover:brightness-110 transition-all text-base flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Solicitar Agendamento de Diagnóstico
+                        </button>
+                    </div>
+
+                    <p class="text-center text-[11px] text-slate-400">
+                        <i class="fa-solid fa-lock text-gold-500 mr-1"></i> As informações fornecidas são estritamente confidenciais e protegidas sob Termos de Sigilo Corporativo.
+                    </p>
+                </form>
+
+                <!-- Confirmation Message Box -->
+                <div id="mensagem-sucesso" class="hidden text-center py-12 space-y-4">
+                    <div class="w-16 h-16 bg-gold-500/20 text-gold-500 border border-gold-500 rounded-full flex items-center justify-center mx-auto text-3xl">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-white">Solicitação Recebida com Sucesso</h3>
+                    <p class="text-slate-300 text-sm max-w-md mx-auto">
+                        Obrigado pelo contato. O executivo Augusto Silva entrará em contato diretamente pelo canal informado para confirmação do horário da reunião.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-navy-950 border-t border-slate-800 text-slate-400 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8 pb-8 border-b border-slate-800/60">
+                
+                <div class="space-y-3 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-gold-500 flex items-center justify-center font-serif text-navy-950 font-bold text-base">
+                            AS
+                        </div>
+                        <span class="font-serif font-bold text-white text-base tracking-wide uppercase">Augusto Silva</span>
+                    </div>
+                    <p class="text-slate-400 text-xs max-w-md leading-relaxed">
+                        Consultoria Executiva especializada em Governança Corporativa, Desenho de Processos de Alta Performance e Eficiência Operacional.
+                    </p>
+                    <div class="flex items-center gap-2 text-gold-400 font-medium">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Representante do CRA-MG na Região de Uberlândia (2025 – 2026)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">Credenciais & Qualificações</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>• Registro CRA-MG Ativo</li>
+                        <li>• Certified ITIL 4 Foundation</li>
+                        <li>• Lean Six Sigma Yellow Belt</li>
+                        <li>• MBAs em Gestão e Governança</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">Atendimento Estratégico</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><i class="fa-solid fa-location-dot text-gold-500 mr-1.5"></i> Uberlândia & Triângulo Mineiro</li>
+                        <li><i class="fa-solid fa-globe text-gold-500 mr-1.5"></i> Projetos Nacionais sob Demanda</li>
+                        <li><i class="fa-solid fa-shield text-gold-500 mr-1.5"></i> Acordo NDA de Confidencialidade</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-500">
+                <p>&copy; 2026 Augusto Silva – Consultoria Executiva. Todos os direitos reservados.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-400">Termos de Confidencialidade</a>
+                    <a href="#" class="hover:text-slate-400">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Interactive Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // ROI Calculator Logic
+        const receitaRange = document.getElementById('receita-range');
+        const equipeRange = document.getElementById('equipe-range');
+        const maturidadeSelect = document.getElementById('maturidade-select');
+        
+        const receitaVal = document.getElementById('receita-val');
+        const equipeVal = document.getElementById('equipe-val');
+        const resultadoEconomia = document.getElementById('resultado-economia');
+
+        function formatCurrency(value) {
+            return new Intl.NumberFormat('pt-BR', {
+                style: 'currency',
+                currency: 'BRL',
+                maximumFractionDigits: 0
+            }).format(value);
+        }
+
+        function calcularEconomia() {
+            const receita = parseFloat(receitaRange.value);
+            const equipe = parseInt(equipeRange.value);
+            const fatorMaturidade = parseFloat(maturidadeSelect.value);
+
+            // Update label UI
+            receitaVal.textContent = formatCurrency(receita);
+            equipeVal.textContent = `${equipe} colaboradores`;
+
+            // Calculate potential savings (Receita * Fator Maturidade * ajuste por equipe)
+            const ajusteEquipe = 1 + (equipe / 200) * 0.2;
+            const economiaEstimada = receita * fatorMaturidade * 0.35 * ajusteEquipe;
+
+            resultadoEconomia.textContent = `${formatCurrency(economiaEstimada)} /ano`;
+        }
+
+        receitaRange.addEventListener('input', calcularEconomia);
+        equipeRange.addEventListener('input', calcularEconomia);
+        maturidadeSelect.addEventListener('change', calcularEconomia);
+
+        // Populate Diagnostic field based on ROI Simulation
+        function preencherDiagnosticoComSimulador() {
+            const receita = formatCurrency(parseFloat(receitaRange.value));
+            const economia = resultadoEconomia.textContent;
+            const campoMsg = document.getElementById('mensagem-campo');
+            
+            campoMsg.value = `Gostaria de agendar o diagnóstico estratégico. Realizei a simulação na página para um faturamento de ${receita} com estimativa de economia recuperável em torno de ${economia}.`;
+        }
+
+        // Form Submit Simulation
+        const formDiagnostico = document.getElementById('form-diagnostico');
+        const mensagemSucesso = document.getElementById('mensagem-sucesso');
+
+        formDiagnostico.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formDiagnostico.classList.add('hidden');
+            mensagemSucesso.classList.remove('hidden');
+        });
+
+        // Initialize calculator on page load
+        window.onload = function() {
+            calcularEconomia();
+        };
+    </script>
+</body>
+</html>
